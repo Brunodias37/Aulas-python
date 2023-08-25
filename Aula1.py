@@ -50,6 +50,7 @@ print('\nOs valores de vetA entre o 5 elemento até o penúltimo elemento: ')
 
 
 #selecionar vários subconjuntos de elementos de uma matriz
+# [{linha}, {coluna} ]
 arrayA = np.array( [['1a','1b','1c','1d','1e','1f','1g','1h','1i'],
                     ['2a','2b','2c','2d','2e','2f','2g','2h','2i'],
                     ['3a','3b','3c','3d','3e','3f','3g','3h','3i'],
