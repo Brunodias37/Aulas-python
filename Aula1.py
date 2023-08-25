@@ -50,7 +50,6 @@ print('\nOs valores de vetA entre o 5 elemento até o penúltimo elemento: ')
 
 
 #selecionar vários subconjuntos de elementos de uma matriz
-# [{linha}, {coluna} ]
 arrayA = np.array( [['1a','1b','1c','1d','1e','1f','1g','1h','1i'],
                     ['2a','2b','2c','2d','2e','2f','2g','2h','2i'],
                     ['3a','3b','3c','3d','3e','3f','3g','3h','3i'],
@@ -76,3 +75,43 @@ print( arrayA[0:2,0:2] )
 
 print('\nApenas os elementos das 2 últimas linhas e das 4 últimas colunas: ')
 print( arrayA[-2:,-4:] )
+
+print('\nApenas os elementos das linhas 2 até 4 e das colunas 4 até 6: ')
+print( arrayA[1:3,3:6] )
+
+
+x = np.array([1, 2, 3, 4, 5])
+y = np.array([6, 7, 8, 9, 10])
+
+print(x + y)
+print(x - y)
+print(y - x)
+print(x * y)
+print(x / y)
+print(y / x)
+
+np.sum(x)
+np.max(x)
+np.min(x)
+np.mean(x)
+np.median()
+
+B = np.array( ([[1,2,3,4],[5,6,7,8]]) )
+#Média dos valores de uma matriz.
+print('B: ')
+display(B)
+
+# média das linhas de B
+media1 = np.mean(B, axis = 1)
+print('\nMédia das linhas de B: ')
+display(media1)
+
+# média das colunas de B
+media2 = np.mean(B, axis = 0)
+print('\nMédia das colunas de B: ')
+display(media2)
+
+# média de todos os valores de B
+media3 = np.mean(B)
+print('\nMédia de todos os valores de B: ')
+display(media3)
