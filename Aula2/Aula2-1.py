@@ -95,10 +95,11 @@ f,ax = plt.subplots(figsize=(4,4));
 sns.heatmap(df2[['genero','idade', 'rendimento','pontuacao']].corr(),annot=True, cmap='Blues');
 
 
+sns.relplot(data=df2, x='idade', y='rendimento', hue='genero')
 
 
-
-
+sns.catplot(data=df2, x='genero', y='idade', kind="violin", color=".9", inner=None)
+sns.swarmplot(data=df, x='genero', y='idade', size=3)
 
 
 
