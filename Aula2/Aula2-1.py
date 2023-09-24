@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 
 warnings.filterwarnings("ignore")
 
-df = pd.read_csv('/workspaces/Aulas-python/Aula2/Mall_Customers.csv', sep=',', encoding='iso-8859-1')
+df = pd.read_csv('C:/Users/Bruno/Desktop/Inteligencia-Artificial/Aulas-python/Aula2/Mall_Customers.csv', sep=',', encoding='iso-8859-1')
 
 #head = df.head()
 # print(head)
@@ -52,54 +52,54 @@ df = pd.read_csv('/workspaces/Aulas-python/Aula2/Mall_Customers.csv', sep=',', e
 # snscountplot = sns.countplot(x='Genre', data=df);
 # print(snscountplot)
 
-df.info()
+# df.info()
 
 # df.rename(columns={'CustomerID': 'identificacao'}, inplace=True)
 # df.rename(columns={'Genre': 'genero'}, inplace=True)
 # df.rename(columns={'Age': 'idade'}, inplace=True)
 # df.rename(columns={'Annual Income (k$)': 'rendimento','Spending Score (1-100)':'pontuacao'}, inplace=True)
 
-boxplot = px.box(df, y='rendimento')
-boxplot.show()
+# boxplot = px.box(df, y='rendimento')
+# boxplot.show()
 
-filtro  = df['rendimento'] < 137
-df1 = df[filtro]
+# filtro  = df['rendimento'] < 137
+# df1 = df[filtro]
+#
+# boxplot = px.box(df, x='rendimento')
+# boxplot.show()
+#
+# boxplot = px.box(df, y='idade')
+# boxplot.show()
 
-boxplot = px.box(df, x='rendimento')
-boxplot.show()
 
-boxplot = px.box(df, y='idade')
-boxplot.show()
-
-
-sns.catplot(data=df, x='genero', y='rendimento', kind="box")
+# sns.catplot(data=df, x='genero', y='rendimento', kind="box")
 
 # fig = px.box(df1, x='genero',y='rendimento')
 # fig.show()
 
 #df.hist(bins=8,figsize=(5,5),color='#7178d7')
 
-f,ax = plt.subplots(figsize=(10,10));
-sns.heatmap(df1.isnull());
+# f,ax = plt.subplots(figsize=(10,10));
+# sns.heatmap(df1.isnull());
+#
+#
+# df2 = df.drop(labels = 'identificacao', axis = 1)
+# df2.head(2)
+#
+#
+# df2['genero'].replace({'Female': 0, 'Male': 1}, inplace=True)
+#
+# df2.head(3)
 
-
-df2 = df.drop(labels = 'identificacao', axis = 1)
-df2.head(2)
-
-
-df2['genero'].replace({'Female': 0, 'Male': 1}, inplace=True)
-
-df2.head(3)
-
-f,ax = plt.subplots(figsize=(4,4));
-sns.heatmap(df2[['genero','idade', 'rendimento','pontuacao']].corr(),annot=True, cmap='Blues');
-
-
-sns.relplot(data=df2, x='idade', y='rendimento', hue='genero')
-
-
-sns.catplot(data=df2, x='genero', y='idade', kind="violin", color=".9", inner=None)
-sns.swarmplot(data=df, x='genero', y='idade', size=3)
+# f,ax = plt.subplots(figsize=(4,4));
+# sns.heatmap(df2[['genero','idade', 'rendimento','pontuacao']].corr(),annot=True, cmap='Blues');
+#
+#
+# sns.relplot(data=df2, x='idade', y='rendimento', hue='genero')
+#
+#
+# sns.catplot(data=df2, x='genero', y='idade', kind="violin", color=".9", inner=None)
+# sns.swarmplot(data=df, x='genero', y='idade', size=3)
 
 
 
